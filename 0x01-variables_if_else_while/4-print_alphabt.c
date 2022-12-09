@@ -12,7 +12,7 @@ int main(void)
 
 	for (low_alpha = 'a'; low_alpha <= 'z'; low_alpha++)
 	{
-		if (low_alpha != 'e' && low_alpha !='q')
+		if (low_alpha != 'e' && low_alpha != 'q')
 			putchar(low_alpha);
 	}
 	putchar('\n');
