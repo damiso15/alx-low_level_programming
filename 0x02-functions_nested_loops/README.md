@@ -6,6 +6,7 @@
 * 3-islower.c - Write a function that checks for lowercase character.
 * 4-isalpha.c - Write a function that checks for alphabetic character.
 * 5-sign.c - Write a function that prints the sign of a number.
+* 6-abs.c - Write a function that computes the absolute value of an integer.
 
 
 
@@ -46,7 +47,6 @@ Write a function that checks for alphabetic character.
 
 FYI: The standard library provides a similar function: isalpha. Run man isalpha to learn more.
 
-
 ## 5-sign.c ##
 Write a function that prints the sign of a number.
 
@@ -54,4 +54,14 @@ Write a function that prints the sign of a number.
 * Returns 1 and prints + if n is greater than zero
 * Returns 0 and prints 0 if n is zero
 * Returns -1 and prints - if n is less than zero
+
+## 6-abs.c ##
+Write a function that computes the absolute value of an integer.
+
+* Prototype: int _abs(int);
+
+FYI: The standard library provides a similar function: abs. Run man abs to learn more.
+
+
+
 
