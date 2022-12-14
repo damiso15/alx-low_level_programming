@@ -7,7 +7,7 @@
 * 4-isalpha.c - Write a function that checks for alphabetic character.
 * 5-sign.c - Write a function that prints the sign of a number.
 * 6-abs.c - Write a function that computes the absolute value of an integer.
-
+* 7-print_last_digit.c - Write a function that prints the last digit of a number.
 
 
 
@@ -62,6 +62,10 @@ Write a function that computes the absolute value of an integer.
 
 FYI: The standard library provides a similar function: abs. Run man abs to learn more.
 
+## 7-print_last_digit.c ##
+Write a function that prints the last digit of a number.
 
+* Prototype: int print_last_digit(int);
+* Returns the value of the last digit
 
 
