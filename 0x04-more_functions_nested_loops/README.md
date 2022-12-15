@@ -6,7 +6,7 @@
 * 4-print_most_numbers.c - Write a function that prints the numbers, from 0 to 9, followed by a new line.
 * 5-more_numbers.c - Write a function that prints 10 times the numbers, from 0 to 14, followed by a new line.
 * 6-print_line.c - Write a function that draws a straight line in the terminal.
-
+* 7-print_diagonal.c - Write a function that draws a diagonal line on the terminal.
 
 
 
@@ -232,6 +232,51 @@ julien@ubuntu:~/0x04$ ./6-lines | cat -e
 $
 __$
 __________$
+$
+julien@ubuntu:~/0x04$ 
+~~~~
+
+## 7-print_diagonal.c ##
+Write a function that draws a diagonal line on the terminal.
+
+* Prototype: void print_diagonal(int n);
+* You can only use _putchar function to print
+* Where n is the number of times the character \ should be printed
+* The diagonal should end with a \n
+* If n is 0 or less, the function should only print a \n
+
+~~~~
+julien@ubuntu:~/0x04$ cat 7-main.c
+#include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    print_diagonal(0);
+    print_diagonal(2);
+    print_diagonal(10);
+    print_diagonal(-4);
+    return (0);
+}
+julien@ubuntu:~/0x04$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 7-main.c 7-print_diagonal.c -o 7-diagonals
+julien@ubuntu:~/0x04$ ./7-diagonals | cat -e
+$
+\$
+ \$
+\$
+ \$
+  \$
+   \$
+    \$
+     \$
+      \$
+       \$
+        \$
+         \$
 $
 julien@ubuntu:~/0x04$ 
 ~~~~
