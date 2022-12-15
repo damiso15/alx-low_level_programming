@@ -7,6 +7,7 @@
 * 5-more_numbers.c - Write a function that prints 10 times the numbers, from 0 to 14, followed by a new line.
 * 6-print_line.c - Write a function that draws a straight line in the terminal.
 * 7-print_diagonal.c - Write a function that draws a diagonal line on the terminal.
+* 8-print_square.c - Write a function that prints a square, followed by a new line.
 
 
 
@@ -280,3 +281,48 @@ $
 $
 julien@ubuntu:~/0x04$ 
 ~~~~
+
+## 8-print_square.c ##
+Write a function that prints a square, followed by a new line.
+
+* Prototype: void print_square(int size);
+* You can only use _putchar function to print
+* Where size is the size of the square
+* If size is 0 or less, the function should print only a new line
+* Use the character # to print the square
+
+~~~~
+julien@ubuntu:~/0x04$ cat 8-main.c 
+#include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    print_square(2);
+    print_square(10);
+    print_square(0);
+    return (0);
+}
+
+julien@ubuntu:~/0x04$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 8-main.c 8-print_square.c -o 8-squares
+julien@ubuntu:~/0x04$ ./8-squares 
+##
+##
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+julien@ubuntu:~/0x04$ 
+~~~~
+
