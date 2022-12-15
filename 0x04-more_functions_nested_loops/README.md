@@ -10,6 +10,10 @@
 * 8-print_square.c - Write a function that prints a square, followed by a new line.
 * 9-fizz_buzz.c - Write a program that prints the numbers from 1 to 100, followed by a new line. But for multiples of three print Fizz instead of the number and for the multiples of five print Buzz. For numbers which are multiples of both three and five print FizzBuzz.
 * 10-print_triangle.c - Write a function that prints a triangle, followed by a new line.
+* 100-prime_factor.c - Write a program that finds and prints the largest prime factor of the number 612852475143, followed by a new line.
+
+
+
 
 
 
@@ -403,3 +407,13 @@ julien@ubuntu:~/0x04$ ./10-triangles | tr ' ' . | cat -e
 $
 julien@ubuntu:~/0x04$
 ~~~~
+
+## 100-prime_factor.c ##
+The prime factors of 1231952 are 2, 2, 2, 2, 37 and 2081.
+
+Write a program that finds and prints the largest prime factor of the number 612852475143, followed by a new line.
+
+* You are allowed to use the standard library
+* Your program will be compiled with this command: gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-prime_factor.c -o 100-prime_factor -lm
+
+
