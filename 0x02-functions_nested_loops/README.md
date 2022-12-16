@@ -13,6 +13,7 @@
 * 10-add.c - Write a function that adds two integers and returns the result.
 * 11-print_to_98.c - Write a function that prints all natural numbers from n to 98, followed by a new line.
 * 100-times_table.c - Write a function that prints the n times table, starting with 0.
+* 101-natural.c - Write a program that computes and prints the sum of all the multiples of 3 or 5 below 1024 (excluded), followed by a new line.
 
 
 ## 0-putchar.c ##
@@ -104,5 +105,10 @@ Write a function that prints the n times table, starting with 0.
 * Prototype: void print_times_table(int n);
 * If n is greater than 15 or less than 0 the function should not print anything
 * Format: see example
+
+## 101-natural.c ##
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Write a program that computes and prints the sum of all the multiples of 3 or 5 below 1024 (excluded), followed by a new line.
+
+* You are allowed to use the standard library
 
 
