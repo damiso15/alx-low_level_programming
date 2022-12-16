@@ -12,7 +12,7 @@
 * 9-times_table.c - Write a function that prints the 9 times table, starting with 0
 * 10-add.c - Write a function that adds two integers and returns the result.
 * 11-print_to_98.c - Write a function that prints all natural numbers from n to 98, followed by a new line.
-
+* 100-times_table.c - Write a function that prints the n times table, starting with 0.
 
 
 ## 0-putchar.c ##
@@ -96,4 +96,13 @@ Write a function that prints all natural numbers from n to 98, followed by a new
 * The first printed number should be the number passed to your function
 * The last printed number should be 98
 * You are allowed to use the standard library
+
+
+## 100-times_table.c ##
+Write a function that prints the n times table, starting with 0.
+
+* Prototype: void print_times_table(int n);
+* If n is greater than 15 or less than 0 the function should not print anything
+* Format: see example
+
 
