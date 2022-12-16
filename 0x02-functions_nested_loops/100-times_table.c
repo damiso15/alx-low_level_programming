@@ -2,7 +2,8 @@
 void putformat(int n);
 
 /**
- * print_times_table - a function that prints the n times table, starting with 0.
+ * print_times_table - a function that prints the n times table,
+ * starting with 0.
  * @n: an input integer value
  * Retrun: Always 0 as asuccess
  */
@@ -50,7 +51,7 @@ void putformat(int n)
 		_putchar(',');
 		_putchar(' ');
 		_putchar(n / 100 + '0');
-		_putchar(n /10 % 10 + '0');
+		_putchar((n / 10) % 10 + '0');
 		_putchar(n % 10 + 10);
 	}
 }
