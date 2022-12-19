@@ -6,7 +6,7 @@
 * 4-print_rev.c - Write a function that prints a string, in reverse, followed by a new line.
 * 5-rev_string.c - Write a function that reverses a string.
 * 6-puts2.c - Write a function that prints every other character of a string, starting with the first character, followed by a new line.
-
+* 7-puts_half.c - Write a function that prints half of a string, followed by a new line.
 
 ## 0-reset_to_98.c  ##
 Write a function that takes a pointer to an int as parameter and updates the value it points to to 98.
@@ -223,3 +223,34 @@ julien@ubuntu:~/0x05$ ./6-puts2
 02468
 julien@ubuntu:~/0x05$ 
 ~~~~
+
+## 7-puts_half.c ##
+Write a function that prints half of a string, followed by a new line.
+
+* Prototype: void puts_half(char *str);
+* The function should print the second half of the string
+* If the number of characters is odd, the function should print the last n characters of the string, where n = (length_of_the_string - 1) / 2
+
+~~~~
+julien@ubuntu:~/0x05$ cat 7-main.c
+#include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *str;
+
+    str = "0123456789";
+    puts_half(str);
+    return (0);
+}
+julien@ubuntu:~/0x05$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 7-main.c 7-puts_half.c -o 7-puts_half
+julien@ubuntu:~/0x05$ ./7-puts_half 
+56789
+julien@ubuntu:~/0x05$ 
+~~~~
+
