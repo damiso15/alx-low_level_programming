@@ -2,6 +2,8 @@
 * 0-reset_to_98.c - Write a function that takes a pointer to an int as parameter and updates the value it points to to 98.
 * 1-swap.c - Write a function that swaps the values of two integers.
 * 2-strlen.c - Write a function that returns the length of a string
+* 3-puts.c - Write a function that prints a string, followed by a new line, to stdout.
+
 
 ## 0-reset_to_98.c  ##
 Write a function that takes a pointer to an int as parameter and updates the value it points to to 98.
@@ -100,4 +102,34 @@ julien@ubuntu:~/0x05$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-
 julien@ubuntu:~/0x05$ ./2-strlen 
 16
 julien@ubuntu:~/0x05$ 
+~~~~
+
+## 3-puts.c ##
+Write a function that prints a string, followed by a new line, to stdout.
+
+* Prototype: void _puts(char *str);
+
+FYI: The standard library provides a similar function: puts. Run man puts to learn more.
+
+~~~~
+julien@ubuntu:~/0x05$ cat 3-main.c
+#include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *str;
+
+    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+    _puts(str);
+    return (0);
+}
+julien@ubuntu:~/0x05$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 3-main.c 3-puts.c -o 3-puts
+julien@ubuntu:~/0x05$ ./3-puts 
+I do not fear computers. I fear the lack of them - Isaac Asimov
+julien@ubuntu:~/0x05$
 ~~~~
