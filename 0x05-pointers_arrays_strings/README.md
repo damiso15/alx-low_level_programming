@@ -3,6 +3,7 @@
 * 1-swap.c - Write a function that swaps the values of two integers.
 * 2-strlen.c - Write a function that returns the length of a string
 * 3-puts.c - Write a function that prints a string, followed by a new line, to stdout.
+* 4-print_rev.c - Write a function that prints a string, in reverse, followed by a new line.
 
 
 ## 0-reset_to_98.c  ##
@@ -132,4 +133,32 @@ julien@ubuntu:~/0x05$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 
 julien@ubuntu:~/0x05$ ./3-puts 
 I do not fear computers. I fear the lack of them - Isaac Asimov
 julien@ubuntu:~/0x05$
+~~~~
+
+## 4-print_rev.c ##
+Write a function that prints a string, in reverse, followed by a new line.
+
+* Prototype: void print_rev(char *s);
+
+~~~~
+julien@ubuntu:~/0x05$ cat 4-main.c
+#include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *str;
+
+    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+    print_rev(str);
+    return (0);
+}
+julien@ubuntu:~/0x05$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 4-main.c 4-print_rev.c -o 4-print_rev
+julien@ubuntu:~/0x05$ ./4-print_rev 
+vomisA caasI - meht fo kcal eht raef I .sretupmoc raef ton od I
+julien@ubuntu:~/0x05$ 
 ~~~~
