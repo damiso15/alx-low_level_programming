@@ -1,6 +1,7 @@
 # alx-low_level_programming
 * 0-reset_to_98.c - Write a function that takes a pointer to an int as parameter and updates the value it points to to 98.
 * 1-swap.c - Write a function that swaps the values of two integers.
+* 2-strlen.c - Write a function that returns the length of a string
 
 ## 0-reset_to_98.c  ##
 Write a function that takes a pointer to an int as parameter and updates the value it points to to 98.
@@ -66,4 +67,37 @@ julien@ubuntu:~/0x05$ ./1-swap
 a=98, b=42
 a=42, b=98
 julien@ubuntu:~/0x05$
+~~~~
+
+## 2-strlen.c ##
+Write a function that returns the length of a string.
+
+* Prototype: int _strlen(char *s);
+ 
+FYI: The standard library provides a similar function: strlen. Run man strlen to learn more.
+
+~~~~
+julien@ubuntu:~/0x05$ cat 2-main.c
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *str;
+    int len;
+
+    str = "My first strlen!";
+    len = _strlen(str);
+    printf("%d\n", len);
+    return (0);
+}
+julien@ubuntu:~/0x05$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-strlen.c -o 2-strlen
+julien@ubuntu:~/0x05$ ./2-strlen 
+16
+julien@ubuntu:~/0x05$ 
 ~~~~
