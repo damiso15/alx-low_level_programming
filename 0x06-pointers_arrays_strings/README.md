@@ -4,6 +4,7 @@
 * 2-strncpy.c - Write a function that copies a string.
 * 3-strcmp.c - Write a function that compares two strings.
 * 4-rev_array.c - Write a function that reverses the content of an array of integers.
+* 5-string_toupper.c - Write a function that changes all lowercase letters of a string to uppercase.
 
 
 ## 0-strcat.c ##
@@ -257,5 +258,37 @@ julien@ubuntu:~/0x06$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 4-main.c 4-
 julien@ubuntu:~/0x06$ ./4-rev_array 
 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 98, 1024, 1337
 1337, 1024, 98, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0
+julien@ubuntu:~/0x06$ 
+~~~~
+
+## 5-string_toupper.c ##
+Write a function that changes all lowercase letters of a string to uppercase.
+
+* Prototype: char *string_toupper(char *);
+
+~~~~
+julien@ubuntu:~/0x06$ cat 5-main.c
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char str[] = "Look up!\n";
+    char *ptr;
+
+    ptr = string_toupper(str);
+    printf("%s", ptr);
+    printf("%s", str);
+    return (0);
+}
+julien@ubuntu:~/0x06$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 5-main.c 5-string_toupper.c -o 5-string_toupper
+julien@ubuntu:~/0x06$ ./5-string_toupper 
+LOOK UP!
+LOOK UP!
 julien@ubuntu:~/0x06$ 
 ~~~~
