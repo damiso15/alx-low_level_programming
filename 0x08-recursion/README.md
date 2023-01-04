@@ -6,7 +6,7 @@
 * 4-pow_recursion.c - Write a function that returns the value of x raised to the power of y.
 * 5-sqrt_recursion.c - Write a function that returns the natural square root of a number.
 * 6-is_prime_number.c - Write a function that returns 1 if the input integer is a prime number, otherwise return 0.
-
+* 100-is_palindrome.c - Write a function that returns 1 if a string is a palindrome and 0 if not.
 
 
 ## 0-puts_recursion.c ##
@@ -283,4 +283,44 @@ julien@ubuntu:~/0x08. Recursion$ ./6-prime
 1
 1
 julien@ubuntu:~/0x08. Recursion$ 
+~~~~
+
+## 100-is_palindrome.c ##
+
+Write a function that returns 1 if a string is a palindrome and 0 if not.
+
+* Prototype: int is_palindrome(char *s);
+* An empty string is a palindrome
+
+~~~~
+julien@ubuntu:~/0x08. Recursion$ cat 100-main.c
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
+
+    r = is_palindrome("level");
+    printf("%d\n", r);
+    r = is_palindrome("redder");
+    printf("%d\n", r);
+    r = is_palindrome("test");
+    printf("%d\n", r);
+    r = is_palindrome("step on no pets");
+    printf("%d\n", r);
+    return (0);
+}
+julien@ubuntu:~/0x08. Recursion$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-main.c 100-is_palindrome.c -o 100-palindrome
+julien@ubuntu:~/0x08. Recursion$ ./100-palindrome 
+1
+1
+0
+1
+julien@ubuntu:~/0x08. Recursion$
 ~~~~
