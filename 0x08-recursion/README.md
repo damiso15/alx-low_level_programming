@@ -3,8 +3,8 @@
 * 1-print_rev_recursion.c - Write a function that prints a string in reverse.
 * 2-strlen_recursion.c - Write a function that returns the length of a string.
 * 3-factorial.c - Write a function that returns the factorial of a given number.
-* 4-pow_recursion.c
-
+* 4-pow_recursion.c - Write a function that returns the value of x raised to the power of y.
+* 5-sqrt_recursion.c
 
 
 ## 0-puts_recursion.c ##
@@ -180,5 +180,53 @@ julien@ubuntu:~/0x08. Recursion$ ./4-pow
 25
 -1
 -125
+julien@ubuntu:~/0x08. Recursion$ 
+~~~~
+
+## 5-sqrt_recursion.c ##
+
+Write a function that returns the natural square root of a number.
+
+* Prototype: int _sqrt_recursion(int n);
+* If n does not have a natural square root, the function should return -1
+
+FYI: The standard library provides a different function: sqrt. Run man sqrt to learn more.
+
+~~~~
+julien@ubuntu:~/0x08. Recursion$ cat 5-main.c 
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
+
+    r = _sqrt_recursion(1);
+    printf("%d\n", r);
+    r = _sqrt_recursion(1024);
+    printf("%d\n", r);
+    r = _sqrt_recursion(16);
+    printf("%d\n", r);
+    r = _sqrt_recursion(17);
+    printf("%d\n", r);
+    r = _sqrt_recursion(25);
+    printf("%d\n", r);
+    r = _sqrt_recursion(-1);
+    printf("%d\n", r);
+    return (0);
+}
+julien@ubuntu:~/0x08. gcc -Wall -pedantic -Werror -Wextra -std=gnu89 5-main.c 5-sqrt_recursion.c -o 5-sqrt
+julien@ubuntu:~/0x08. Recursion$ ./5-sqrt 
+1
+32
+4
+-1
+5
+-1
 julien@ubuntu:~/0x08. Recursion$ 
 ~~~~
