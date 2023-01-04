@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _stspn - a funstion that gets the length of a prefic substring
+ * _strspn - a funstion that gets the length of a prefic substring
  * @s: an input string
  * @accept: an input character to find s
  * Return: a pointer to string
