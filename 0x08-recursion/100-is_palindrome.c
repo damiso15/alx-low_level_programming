@@ -1,21 +1,21 @@
 #include "main.h"
 
 /**
- * _strlength: a function that returns the length of a string
+ * _strlength - a function that returns the length of a string
  * @s: an input string
  * Return: the length of the string
  */
-int _strlength(char *s)	
+int _strlength(char *s)
 {
 	if (!*s)
 	{
 		return (0);
 	}
-	return (1 +_strlength(s + 1));
+	return (1 + _strlength(s + 1));
 }
 
 /**
- * _is_reverse: a function that compares strings
+ * _is_reverse - a function that compares strings
  * @s: an input string
  * @l: an input integer of the length
  * Return: a matching string
@@ -35,7 +35,7 @@ int _is_reverse(char *s, int l)
 
 /**
  * is_palindrome - a function that returns 1 if a string
- * is a palindrome and 0 if not.
+ * is a palindrome and 0 if not
  * @s: an input string
  * Return: 1 if the string is a palindrome or 0 otherwise
  */
@@ -47,4 +47,3 @@ int is_palindrome(char *s)
 		return (1);
 	return (_is_reverse(s, l));
 }
-
