@@ -5,6 +5,7 @@
 * 3-strspn.c - Write a function that gets the length of a prefix substring.
 * 4-strpbrk.c - Write a function that searches a string for any of a set of bytes.
 * 5-strstr.c - Write a function that locates a substring.
+* 7-print_chessboard.c - Write a function that prints the chessboard.
 
 
 ## 0-memset.c ##
@@ -316,5 +317,49 @@ int main(void)
 julien@ubuntu:~/0x07$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 5-main.c 5-strstr.c -o 5-strstr
 julien@ubuntu:~/0x07$ ./5-strstr 
 world
+julien@ubuntu:~/0x07$ 
+~~~~
+
+## 7-print_chessboard.c ##
+
+Write a function that prints the chessboard.
+
+* Prototype: void print_chessboard(char (*a)[8]);
+
+~~~~
+julien@ubuntu:~/0x07$ cat 7-main.c 
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char board[8][8] = {
+        {'r', 'k', 'b', 'q', 'k', 'b', 'k', 'r'},
+        {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
+        {'R', 'K', 'B', 'Q', 'K', 'B', 'K', 'R'},
+    };
+    print_chessboard(board);
+    return (0);
+}
+julien@ubuntu:~/0x07$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 7-main.c 7-print_chessboard.c -o 7-print_chessboard
+julien@ubuntu:~/0x07$ ./7-print_chessboard 
+rkbqkbkr
+pppppppp
+
+
+
+
+PPPPPPPP
+RKBQKBKR
 julien@ubuntu:~/0x07$ 
 ~~~~
