@@ -4,7 +4,8 @@
  * _strspn - a funstion that gets the length of a prefic substring
  * @s: an input string
  * @accept: an input character to find s
- * Return: a pointer to string
+ * Return: the number of bytes in the initial segment of s which
+ * consist only of bytes from accept
  */
 unsigned int _strspn(char *s, char *accept)
 {

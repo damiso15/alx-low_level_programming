@@ -5,7 +5,7 @@
  * @s: an input string array
  * @b: an input constant byte
  * @n: an input number of bytes
- * Return: pointer string
+ * Return: a pointer to the memory area s
  */
 char *_memset(char *s, char b, unsigned int n)
 {
