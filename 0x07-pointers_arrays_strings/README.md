@@ -1,6 +1,7 @@
 # alx-low_level_programming
 * 0-memset.c - Write a function that fills memory with a constant byte.
 * 1-memcpy.c - Write a function that copies memory area.
+* 2-strchr.c - Write a function that locates a character in a string.
 
 
 
@@ -171,3 +172,40 @@ julien@ubuntu:~/0x07$ ./1-memcpy
 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
 julien@ubuntu:~/0x07$ 
 ~~~~
+
+## 2-strchr.c ##
+Write a function that locates a character in a string.
+
+* Prototype: char *_strchr(char *s, char c);
+* Returns a pointer to the first occurrence of the character c in the string s, or NULL if the character is not found
+
+FYI: The standard library provides a similar function: strchr. Run man strchr to learn more.
+
+~~~~
+julien@ubuntu:~/0x07$ cat 2-main.c
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *s = "hello";
+    char *f;
+
+    f = _strchr(s, 'l');
+
+    if (f != NULL)
+    {
+        printf("%s\n", f);
+    }
+    return (0);
+}
+julien@ubuntu:~/0x07$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-strchr.c -o 2-strchr
+julien@ubuntu:~/0x07$ ./2-strchr 
+llo
+julien@ubuntu:~/0x07$ 
+~~~~~
