@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		coins = amount(atoi(argv[1]);
+		coins = amount(atoi(argv[1]));
 		printf("%d\n", coins);
 	}
 	return (0);
