@@ -25,10 +25,15 @@ int amount(int num)
 		}
 		else if (num >= 5)
 		{
-			num -= 10;
-			counter2 += 1;
+			num -= 5;
+			counter5 += 1;
 		}
 		else if (num >= 2)
+		{
+			num -= 2;
+			counter2 += 1;
+		}
+		else if (num >= 1)
 		{
 			num -= 1;
 			counter1 += 1;
