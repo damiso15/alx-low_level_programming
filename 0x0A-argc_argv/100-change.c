@@ -54,7 +54,7 @@ int amount(int num)
 int main(int argc, char *argv[])
 {
 	int coins, change;
-	
+
 	change = atoi(argv[1]);
 
 	if (argc != 2)
