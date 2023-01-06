@@ -53,22 +53,20 @@ int amount(int num)
  */
 int main(int argc, char *argv[])
 {
-	int coins, change;
-
-	change = atoi(argv[1]);
+	int coins;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	else if (change < 0)
+	else if (atoi(argv[1]) < 0)
 	{
 		printf("%d\n", 0);
 	}
 	else
 	{
-		coins = amount(change);
+		coins = amount(atoi(argv[1]);
 		printf("%d\n", coins);
 	}
 	return (0);
