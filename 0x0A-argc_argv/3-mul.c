@@ -6,13 +6,13 @@
  * @argc: an input integer that contains the number of command line
  * arguments
  * @argv: an input array containing the program command line arguments
- * Return: 0 as success
+ * Return: 0 as success and 1 as error
  */
 int main(int argc, char *argv[])
 {
 	int sum;
 
-	if (argc < 2 || argc > 3)
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
