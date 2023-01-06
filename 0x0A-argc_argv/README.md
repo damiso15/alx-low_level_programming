@@ -2,7 +2,7 @@
 * 0-whatsmyname.c - Write a program that prints its name, followed by a new line.
 * 1-args.c - Write a program that prints the number of arguments passed into it.
 * 2-args.c - Write a program that prints all arguments it receives.
-
+* 3-mul.c - Write a program that multiplies two numbers.
 
 
 ## 0-whatsmyname.c ##
@@ -61,5 +61,28 @@ anything,
 but
 not
 everything.
+julien@ubuntu:~/0x0A. argc, argv$ 
+~~~~
+
+## 3-mul.c ## 
+
+Write a program that multiplies two numbers.
+
+* Your program should print the result of the multiplication, followed by a new line
+* You can assume that the two numbers and result of the multiplication can be stored in an integer
+* If the program does not receive two arguments, your program should print Error, followed by a new line, and return 1
+
+~~~~
+julien@ubuntu:~/0x0A. argc, argv$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-mul.c -o mul
+julien@ubuntu:~/0x0A. argc, argv$ ./mul 2 3
+6
+julien@ubuntu:~/0x0A. argc, argv$ ./mul 2 -3
+-6
+julien@ubuntu:~/0x0A. argc, argv$ ./mul 2 0
+0
+julien@ubuntu:~/0x0A. argc, argv$ ./mul 245 3245342
+795108790
+julien@ubuntu:~/0x0A. argc, argv$ ./mul
+Error
 julien@ubuntu:~/0x0A. argc, argv$ 
 ~~~~
