@@ -25,7 +25,10 @@ char *create_array(unsigned int size, char c)
 			str[n] = c;
 			n++;
 		}
+		return (str);
 
 	}
-	return (str);
+	
+	else
+		return (NULL);
 }
