@@ -3,28 +3,28 @@
 #include <ctype.h>
 
 /**
- * main - A program that adds positive numbers
- * @argc: The arguments' counter
- * @argv: The argument's values
- * Return: Always 0 (Success)
+ * main - a program that adds positive numbers
+ * @argc: the input character
+ * @argv: the input character array
+ * Return: Always 0 (Success) and 1 (Error)
  */
 int main(int argc, char **argv)
 {
-	int num, n, sum = 0;
+	int num, result = 0, i;
 
-	while (argc > 1)
+	while (argc-- > 1)
 	{
-		for (n = 0; argv[argc][n]; n++)
+		for (i = 0; argv[argc][i]; i++)
 		{
-			if (!(isdigit(argv[argc][n])))
+			if (!(isdigit(argv[argc][i])))
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
 		num = atoi(argv[argc]);
-		sum += num;
+		result += num;
 	}
-	printf("%d\n", sum);
+	printf("%d\n", result);
 	return (0);
 }
