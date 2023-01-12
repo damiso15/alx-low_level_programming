@@ -20,11 +20,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	else
-	{
-		for (n = 0; n < nmemb * size; n++)
-			str[n] = 0;
-	}
+	for (n = 0; n < nmemb * size; n++)
+		str[n] = 0;
+
 	return (str);
 
 }
