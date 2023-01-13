@@ -26,11 +26,30 @@ void print_number(int n)
  */
 void print_integer(int a)
 {
-	int num = 1000000000;
+	int len, count, remain, pow, counter, m;
 
-	for (; num >= 1; num /= 10)
-		if (a / num != 0)
-		{
-			_putchar((a / num) % 10 + '0');
-		}
+	for (len = 0; n != 0; len++)
+	{
+		n /= 10;
+	}
+
+	for (pow = 1; counter < (len - 1); counter++)
+	{
+		pow *= 10;
+	}
+
+	m = n;
+
+	for  (count = 0; count < len; counter++)
+	{
+		a = m;
+		if (m < 0)
+			_putchar(((m / pow) * -1) + '0');
+		else
+			_putchar((m / pow) + '0');
+
+		remain = a % pow;
+		pow /= 10;
+		m = remain;
+	}
 }
