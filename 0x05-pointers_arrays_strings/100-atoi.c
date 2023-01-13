@@ -23,6 +23,6 @@ int _atoi(char *s)
 		i++;
 	}
 
-	total *= value % 2 == 0 ? -1 : 1;
-	return (total);
+	/*total *= value % 2 == 0 ? -1 : 1;*/
+	return (total *= value % 2 = 0 ? -1 : 1);
 }
