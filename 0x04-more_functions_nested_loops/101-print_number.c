@@ -6,50 +6,62 @@ void print_integer(int a);
  * @n: an input integer
  * Return: Always 0 as Success
  */
-void print_number(int n)
+
+int  power(int base, int exp)
 {
-	if (n == 0)
-		_putchar('0');
-	else if (n < 0)
-	{
-		_putchar('-');
-		print_integer(n * -1);
-	}
-	else
-		print_integer(n);
+	int i, num;
+
+	num = 1;
+	for (i = 0; i < exp; ++i)
+		num *= base;
+
+	return (num);
 }
 
 /**
- * print_integer - a function that prints n
- * @a: an input unsigned integer
- * Return: Always 0 as Success
+ * print_number - prints an integer
+ * @n: number to print
+ * Return void
  */
-void print_integer(int a)
+
+void print_number(int n)
 {
-	int len, count, remain, pow, counter, m;
+	int negative = 0;
+	int digit;
+	int divisor;
+	int begin = 0;
+	int place = 10;
 
-	for (len = 0; n != 0; len++)
+	if (n < 0)
 	{
-		n /= 10;
+		negative = 1;
+		n = n * -1;
 	}
-
-	for (pow = 1; counter < (len - 1); counter++)
+	while (place >= 0)
 	{
-		pow *= 10;
-	}
-
-	m = n;
-
-	for  (count = 0; count < len; counter++)
-	{
-		a = m;
-		if (m < 0)
-			_putchar(((m / pow) * -1) + '0');
+		/*divisor = pow(10, place);*/
+		divisor = power(10, place);
+		digit = ((n / divisor) % 10);
+		if (digit == 0 && begin == 0)
+		{
+			place--;
+		}
+		else if (digit != 0 && begin == 0)
+		{
+			begin = 1;
+			if (negative == 1)
+				_putchar('-');
+			_putchar('0' + digit);
+			place--;
+		}
 		else
-			_putchar((m / pow) + '0');
-
-		remain = a % pow;
-		pow /= 10;
-		m = remain;
+		{
+			_putchar('0' + digit);
+			place--;
+		}
+	}
+	if (digit == 0 && divisor == 1)
+	{
+		_putchar(48);
 	}
 }
