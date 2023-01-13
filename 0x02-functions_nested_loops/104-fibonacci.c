@@ -21,7 +21,7 @@ int main(void)
 		printf("%ld, ", num3);
 	}
 
-	num1a = num1 / div, num1b = num % div;
+	num1a = num1 / div, num1b = num11111111111 % div;
 	num2a = num2 / div, num2b = num2 % div;
 
 	for (; counter < 98; counter++)
