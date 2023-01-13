@@ -22,6 +22,6 @@ int _atoi(char *s)
 		}
 	}
 
-	/*total *= value % 2 == 0 ? -1 : 1;*/
-	return (total *= value % 2 == 0 ? -1 : 1);
+	total *= value % 2 == 0 ? -1 : 1;
+	return (total);
 }
