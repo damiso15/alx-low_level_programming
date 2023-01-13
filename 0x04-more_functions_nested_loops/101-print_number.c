@@ -7,61 +7,31 @@ void print_integer(int a);
  * Return: Always 0 as Success
  */
 
-int  power(int base, int exp)
+void print_number(int n)
 {
-	int i, num;
-
-	num = 1;
-	for (i = 0; i < exp; ++i)
-		num *= base;
-
-	return (num);
+	if (n == 0)
+		_putchar('0');
+	else if (n < 0)
+	{
+		_putchar('-');
+		print_integer(n * -1);
+	}
+	else
+		print_integer(n);
 }
 
 /**
- * print_number - prints an integer
- * @n: number to print
- * Return void
+ * print_integer - a function that prints n
+ * @a: an input unsigned integer
+ * Return: Always 0 as Success
  */
-
-void print_number(int n)
+void print_integer(int a)
 {
-	int negative = 0;
-	int digit;
-	int divisor;
-	int begin = 0;
-	int place = 10;
+	int num = 1000000000;
 
-	if (n < 0)
-	{
-		negative = 1;
-		n = n * -1;
-	}
-	while (place >= 0)
-	{
-		/*divisor = pow(10, place);*/
-		divisor = power(10, place);
-		digit = ((n / divisor) % 10);
-		if (digit == 0 && begin == 0)
+	for (; num >= 1; num /= 10)
+		if (a / num != 0)
 		{
-			place--;
+			_putchar((a / num) % 10 + '0');
 		}
-		else if (digit != 0 && begin == 0)
-		{
-			begin = 1;
-			if (negative == 1)
-				_putchar('-');
-			_putchar('0' + digit);
-			place--;
-		}
-		else
-		{
-			_putchar('0' + digit);
-			place--;
-		}
-	}
-	if (digit == 0 && divisor == 1)
-	{
-		_putchar(48);
-	}
 }
