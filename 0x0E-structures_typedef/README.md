@@ -3,6 +3,8 @@
 * 1-init_dog.c - Write a function that initialize a variable of type struct dog.
 * 2-print_dog.c - Write a function that prints a struct dog.
 * dog.h - Define a new type dog_t as a new name for the type struct dog.
+* 4-new_dog.c - Write a function that creates a new dog.
+
 
 ## dog .h ##
 
@@ -132,6 +134,38 @@ int main(void)
 }
 julien@ubuntu:~/0x0d. structures, typedef$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-main.c -o d
 julien@ubuntu:~/0x0d. structures, typedef$ ./d 
+My name is Poppy, and I am 3.5 :) - Woof!
+julien@ubuntu:~/0x0d. structures, typedef$ 
+~~~~
+
+## 4-new_dog.c ##
+
+Write a function that creates a new dog.
+
+* Prototype: dog_t *new_dog(char *name, float age, char *owner);
+* You have to store a copy of name and owner
+* Return NULL if the function fails
+
+~~~~
+julien@ubuntu:~/0x0d. structures, typedef$ cat 4-main.c
+#include <stdio.h>
+#include "dog.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    dog_t *my_dog;
+
+    my_dog = new_dog("Poppy", 3.5, "Bob");
+    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog->name, my_dog->age);
+    return (0);
+}
+julien@ubuntu:~/0x0d. structures, typedef$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 4-main.c 4-new_dog.c -o e
+julien@ubuntu:~/0x0d. structures, typedef$ ./e
 My name is Poppy, and I am 3.5 :) - Woof!
 julien@ubuntu:~/0x0d. structures, typedef$ 
 ~~~~
