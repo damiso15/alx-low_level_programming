@@ -1,6 +1,7 @@
 # alx-low_level_programming
 * 0x0D-preprocessor - Create a header file that defines a macro named SIZE as an abbreviation for the token 1024.
 * 1-pi.h - Create a header file that defines a macro named PI as an abbreviation for the token 3.14159265359.
+* 2-main.c - Write a program that prints the name of the file it was compiled from, followed by a new line.
 
 
 ## 0x0D-preprocessor ##
@@ -61,5 +62,23 @@ int main(void)
 julien@ubuntu:~/0x0c. macro, structures$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c -o b
 julien@ubuntu:~/0x0c. macro, structures$ ./b
 30171.855
+julien@ubuntu:~/0x0c. macro, structures$ 
+~~~~
+
+
+## 2-main.c ##
+
+Write a program that prints the name of the file it was compiled from, followed by a new line.
+
+* You are allowed to use the standard library
+
+~~~~
+julien@ubuntu:~/0x0c. macro, structures$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c -o c
+julien@ubuntu:~/0x0c. macro, structures$ ./c 
+2-main.c
+julien@ubuntu:~/0x0c. macro, structures$ cp 2-main.c 02-main.c
+julien@ubuntu:~/0x0c. macro, structures$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 02-main.c -o cc
+julien@ubuntu:~/0x0c. macro, structures$ ./cc
+02-main.c
 julien@ubuntu:~/0x0c. macro, structures$ 
 ~~~~
