@@ -2,6 +2,7 @@
 * 0x0D-preprocessor - Create a header file that defines a macro named SIZE as an abbreviation for the token 1024.
 * 1-pi.h - Create a header file that defines a macro named PI as an abbreviation for the token 3.14159265359.
 * 2-main.c - Write a program that prints the name of the file it was compiled from, followed by a new line.
+* 3-function_like_macro.h - Write a function-like macro ABS(x) that computes the absolute value of a number x.
 
 
 ## 0x0D-preprocessor ##
@@ -80,5 +81,36 @@ julien@ubuntu:~/0x0c. macro, structures$ cp 2-main.c 02-main.c
 julien@ubuntu:~/0x0c. macro, structures$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 02-main.c -o cc
 julien@ubuntu:~/0x0c. macro, structures$ ./cc
 02-main.c
+julien@ubuntu:~/0x0c. macro, structures$ 
+~~~~
+
+## 3-function_like_macro.h ##
+
+Write a function-like macro ABS(x) that computes the absolute value of a number x.
+
+~~~~
+julien@ubuntu:~/0x0c. macro, structures$ cat 3-main.c
+#include <stdio.h>
+#include "3-function_like_macro.h"
+#include "3-function_like_macro.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int i;
+    int j;
+
+    i = ABS(-98) * 10;
+    j = ABS(98) * 10;
+    printf("%d, %d\n", i, j);
+    return (0);
+}
+julien@ubuntu:~/0x0c. macro, structures$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-main.c -o d
+julien@ubuntu:~/0x0c. macro, structures$ ./d 
+980, 980
 julien@ubuntu:~/0x0c. macro, structures$ 
 ~~~~
