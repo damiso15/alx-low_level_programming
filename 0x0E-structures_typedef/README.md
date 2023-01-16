@@ -1,6 +1,7 @@
 # alx-low_level_programming
 * dog.h - Define a new type struct dog with the following elements.
 * 1-init_dog.c - Write a function that initialize a variable of type struct dog.
+* 2-print_dog.c - Write a function that prints a struct dog.
 
 ## dog .h ##
 
@@ -63,5 +64,43 @@ int main(void)
 julien@ubuntu:~/0x0d. structures, typedef$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-init_dog.c -o b
 julien@ubuntu:~/0x0d. structures, typedef$ ./b 
 My name is Poppy, and I am 3.5 :) - Woof!
+julien@ubuntu:~/0x0d. structures, typedef$ 
+~~~~
+
+## 2-print_dog.c ##
+
+Write a function that prints a struct dog
+
+* Prototype: void print_dog(struct dog *d);
+* Format: see example bellow
+* You are allowed to use the standard library
+* If an element of d is NULL, print (nil) instead of this element. (if name is NULL, print Name: (nil))
+* If d is NULL print nothing.
+
+~~~~
+julien@ubuntu:~/0x0d. structures, typedef$ cat 2-main.c
+#include <stdio.h>
+#include "dog.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    struct dog my_dog;
+
+    my_dog.name = "Poppy";
+    my_dog.age = 3.5;
+    my_dog.owner = "Bob";
+    print_dog(&my_dog);
+    return (0);
+}
+julien@ubuntu:~/0x0d. structures, typedef$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-print_dog.c -o c
+julien@ubuntu:~/0x0d. structures, typedef$ ./c 
+Name: Poppy
+Age: 3.500000
+Owner: Bob
 julien@ubuntu:~/0x0d. structures, typedef$ 
 ~~~~
