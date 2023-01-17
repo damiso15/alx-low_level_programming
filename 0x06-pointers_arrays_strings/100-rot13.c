@@ -7,16 +7,20 @@
  */
 char *rot13(char *s)
 {
-	int num = 0;
+	int num1, num2;
 
-	for (; s[num] != '\0'; num++)
+	char str1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char str2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	for (num1 = 0; s[num1]; num1++)
 	{
-		for (; (s[num] >= 'a' && s[num] <= 'z') || (s[num] >= 'A' && s[num] <= 'Z'); num++)
+		for (num2 = 0; str1[num2]; num2++)
 		{
-			if ((s[num] >= 'a' && s[num] <= 'm') || (s[num] >= 'A' && s[num] <= 'M'))
-				s[num] += 13;
-			else
-				s[num] -= 13;
+			if (s[num1] == str1[num2])
+			{
+				s[num1] = str2[num2];
+				break;
+			}
 		}
 	}
 	return (s);
