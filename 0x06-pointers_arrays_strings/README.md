@@ -6,8 +6,11 @@
 * 4-rev_array.c - Write a function that reverses the content of an array of integers.
 * 5-string_toupper.c - Write a function that changes all lowercase letters of a string to uppercase.
 * 6-cap_string.c - Write a function that capitalizes all words of a string.
-* 7-leet.c - Mozart composed his music not for the elite, but for everybody
+* 7-leet.c - Mozart composed his music not for the elite, but for everybody.
 * 100-rot13.c - Write a function that encodes a string using rot13.
+* 101-print_number.c - Write a function that prints an integer.
+* 102-magic.c - Add one line to this [code](https://github.com/holbertonschool/make_magic_happen/blob/master/magic.c "magic.c"), so that the program prints a[2] = 98, followed by a new line.
+
 
 
 ## 0-strcat.c ##
@@ -427,3 +430,62 @@ EBG13 ("ebgngr ol 13 cynprf", fbzrgvzrf ulcurangrq EBG-13) vf n fvzcyr yrggre fh
 EBG13 ("ebgngr ol 13 cynprf", fbzrgvzrf ulcurangrq EBG-13) vf n fvzcyr yrggre fhofgvghgvba pvcure.
 julien@ubuntu:~/0x06$ 
 ~~~~
+
+
+## 101-print_number.c ##
+
+Write a function that prints an integer.
+
+* Prototype: void print_number(int n);
+* You can only use _putchar function to print
+* You are not allowed to use long
+* You are not allowed to use arrays or pointers
+* You are not allowed to hard-code special values
+
+~~~~
+julien@ubuntu:~/0x06$ cat 101-main.c
+#include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    print_number(98);
+    _putchar('\n');
+    print_number(402);
+    _putchar('\n');
+    print_number(1024);
+    _putchar('\n');
+    print_number(0);
+    _putchar('\n');
+    print_number(-98);
+    _putchar('\n');
+    return (0);
+}
+julien@ubuntu:~/0x06$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 101-main.c 101-print_number.c -o 101-print_numbers
+julien@ubuntu:~/0x06$ ./101-print_numbers 
+98
+402
+1024
+0
+-98
+julien@ubuntu:~/0x06$ 
+~~~~
+
+## 102-magic.c ##
+
+Add one line to this code, so that the program prints a[2] = 98, followed by a new line.
+
+* You are not allowed to use the variable a in your new line of code
+* You are not allowed to modify the variable p
+* You can only write one statement
+* You are not allowed to use ,
+* You are not allowed to code anything else than the line of expected line of code at the expected line
+* Your code should be written at line 19, before the ;
+* Do not remove anything from the initial code (not even the comments)
+* and don’t change anything but the line of code you are adding (don’t change the spaces to tabs!)
+* You are allowed to use the standard library
+
