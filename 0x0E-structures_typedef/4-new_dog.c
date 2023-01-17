@@ -23,14 +23,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	new_dog->name = malloc(len_name * sizeof(char) + 1);
 
 	if (new_dog->name == NULL)
-	{
 		return (NULL);
-	}
 
 	for (i = 0; i < len_name; i++)
-	{
 		new_dog->name[i] = name[i];
-	}
+
 	new_dog->name[i] = '\0';
 
 	len_owner = strlen(owner);
