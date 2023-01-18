@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		return (1);
+		return (98);
 	}
 
 	num1 = atoi(argv[1]), num2 = atoi(argv[3]);
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	if (result == NULL)
 	{
 		printf("Error\n");
-		return (2);
+		return (99);
 	}
 
 	printf("%d\n", result(num1, num2));
