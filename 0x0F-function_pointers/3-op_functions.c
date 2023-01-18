@@ -64,6 +64,6 @@ int op_mod(int a, int b)
 		return (100);
 	}
 	else
-		return (a + b);
+		return (a % b);
 }
 
