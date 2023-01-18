@@ -29,7 +29,8 @@ int main(int argc, char *argv[])
 
 	while (n < data)
 	{
-		printf("%02x", ((unsigned char *)main)[n++]);
+		n++;
+		printf("%02x", ((unsigned char *)main)[n]);
 		printf("%c", n < data - 1 ? ' ' : '\n');
 	}
 	return (0);
