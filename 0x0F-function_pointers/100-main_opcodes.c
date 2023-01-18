@@ -25,11 +25,8 @@ int main(int argc, char *argv[])
 		return (2);
 	}
 
-	n = 0;
-
-	while (n < data)
+	for (n = 0; n < data; n++)
 	{
-		n++;
 		printf("%02x", ((unsigned char *)main)[n]);
 		printf("%c", n < data - 1 ? ' ' : '\n');
 	}
