@@ -25,6 +25,8 @@ int main(int argc, char *argv[])
 		return (2);
 	}
 
+	n = 0;
+
 	while (n < data)
 	{
 		printf("%02x", ((unsigned char *)main)[n++]);
