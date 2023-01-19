@@ -13,6 +13,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(ap, n);
 
+	if (n == 0)
+		printf("\n");
+
 	for (num = 0; num < n; num++)
 	{
 		print = va_arg(ap, unsigned int);
@@ -22,7 +25,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			printf("%s", separator);
 
 		if (separator == NULL)
-			break;
+			continue;
 	}
 	printf("\n");
 	va_end(ap);
