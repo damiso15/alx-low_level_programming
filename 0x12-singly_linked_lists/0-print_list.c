@@ -10,7 +10,7 @@ size_t print_list(const list_t *h)
 	const list_t *temp = h;
 	unsigned long int num;
 
-	num = 1;
+	num = 0;
 	if (temp == NULL)
 		printf("[0] (nil)\n");
 
