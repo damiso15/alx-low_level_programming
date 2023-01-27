@@ -4,6 +4,8 @@
 * 2-add_node.c - Write a function that adds a new node at the beginning of a list_t list.
 * 3-add_node_end.c - Write a function that adds a new node at the end of a list_t list.
 * 4-free_list.c - Write a function that frees a list_t list.
+* 100-first.c - Write a function that prints You're beat! and yet, you must allow,\nI bore my house upon my back!\n before the main function is executed.
+
 
 
 ## 0-print_list.c ##
@@ -355,4 +357,32 @@ julien@ubuntu:~/0x12. Singly linked lists$ valgrind ./e
 ==3598== For counts of detected and suppressed errors, rerun with: -v
 ==3598== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 julien@ubuntu:~/0x12. Singly linked lists$ 
+~~~~
+
+## 100-first.c ##
+
+Write a function that prints You're beat! and yet, you must allow,\nI bore my house upon my back!\n before the main function is executed.
+
+* You are allowed to use the printf function
+
+~~~~
+julien@ubuntu:~/0x12. Singly linked lists$ cat 100-main.c
+#include <stdio.h>
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    printf("(A tortoise, having pretty good sense of a hare's nature, challenges one to a race.)\n");
+    return (0);
+}
+julien@ubuntu:~/$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-main.c 100-first.c -o first
+julien@ubuntu:~/$ ./first 
+You're beat! and yet, you must allow,
+I bore my house upon my back!
+(A tortoise, having pretty good sense of a hare's nature, challenges one to a race.)
+julien@ubuntu:~/$ 
 ~~~~
