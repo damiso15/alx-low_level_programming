@@ -3,6 +3,7 @@
 * 1-list_len.c - Write a function that returns the number of elements in a linked list_t list.
 * 2-add_node.c - Write a function that adds a new node at the beginning of a list_t list.
 * 3-add_node_end.c - Write a function that adds a new node at the end of a list_t list.
+* 4-free_list.c - Write a function that frees a list_t list.
 
 
 ## 0-print_list.c ##
@@ -296,5 +297,62 @@ julien@ubuntu:~/0x12. Singly linked lists$ ./d
 [7] Timothy
 [6] Victor
 [6] Walton
+julien@ubuntu:~/0x12. Singly linked lists$ 
+~~~~
+
+## 4-free_list.c ##
+
+Write a function that frees a list_t list.
+
+* Prototype: void free_list(list_t *head);
+
+~~~~
+julien@ubuntu:~/0x12. Singly linked lists$ cat 4-main.c
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "lists.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    list_t *head;
+
+    head = NULL;
+    add_node_end(&head, "Bob");
+    add_node_end(&head, "&");
+    add_node_end(&head, "Kris");
+    add_node_end(&head, "love");
+    add_node_end(&head, "asm");
+    print_list(head);
+    free_list(head);
+    head = NULL;
+    return (0);
+}
+julien@ubuntu:~/0x12. Singly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 4-main.c 4-free_list.c 3-add_node_end.c 0-print_list.c -o e
+julien@ubuntu:~/0x12. Singly linked lists$ valgrind ./e
+==3598== Memcheck, a memory error detector
+==3598== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==3598== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==3598== Command: ./e
+==3598== 
+[6] Bob
+[1] &
+[3] Kris
+[4] love
+[3] asm
+==3598== 
+==3598== HEAP SUMMARY:
+==3598==     in use at exit: 0 bytes in 0 blocks
+==3598==   total heap usage: 11 allocs, 11 frees, 1,166 bytes allocated
+==3598== 
+==3598== All heap blocks were freed -- no leaks are possible
+==3598== 
+==3598== For counts of detected and suppressed errors, rerun with: -v
+==3598== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 julien@ubuntu:~/0x12. Singly linked lists$ 
 ~~~~
