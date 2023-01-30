@@ -8,6 +8,7 @@
 * 6-pop_listint.c - Write a function that deletes the head node of a listint_t linked list, and returns the head node’s data (n).
 * 7-get_nodeint.c - Write a function that returns the nth node of a listint_t linked list.
 * 8-sum_listint.c - Write a function that returns the sum of all the data (n) of a listint_t linked list.
+* 9-insert_nodeint.c - Write a function that inserts a new node at a given position.
 
 
 ## 0-print_listint.c ##
@@ -524,5 +525,69 @@ int main(void)
 julien@ubuntu:~/c0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 8-main.c 3-add_nodeint_end.c 5-free_listint2.c 8-sum_listint.c -o i
 julien@ubuntu:~/0x13. More singly linked lists$ ./i 
 sum = 1534
+julien@ubuntu:~/0x13. More singly linked lists$ 
+~~~~
+
+## 9-insert_nodeint ##
+
+Write a function that inserts a new node at a given position.
+
+* Prototype: listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
+* where idx is the index of the list where the new node should be added. Index starts at 0
+* Returns: the address of the new node, or NULL if it failed
+* if it is not possible to add the new node at index idx, do not add the new node and return NULL
+
+~~~~
+julien@ubuntu:~/0x13. More singly linked lists$ cat 9-main.c 
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "lists.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+
+    head = NULL;
+    add_nodeint_end(&head, 0);
+    add_nodeint_end(&head, 1);
+    add_nodeint_end(&head, 2);
+    add_nodeint_end(&head, 3);
+    add_nodeint_end(&head, 4);
+    add_nodeint_end(&head, 98);
+    add_nodeint_end(&head, 402);
+    add_nodeint_end(&head, 1024);
+    print_listint(head);
+    printf("-----------------\n");
+    insert_nodeint_at_index(&head, 5, 4096);
+    print_listint(head);
+    free_listint2(&head);
+    return (0);
+}
+julien@ubuntu:~/0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 9-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c 9-insert_nodeint.c -o j
+julien@ubuntu:~/0x13. More singly linked lists$ ./j 
+0
+1
+2
+3
+4
+98
+402
+1024
+-----------------
+0
+1
+2
+3
+4
+4096
+98
+402
+1024
 julien@ubuntu:~/0x13. More singly linked lists$ 
 ~~~~
