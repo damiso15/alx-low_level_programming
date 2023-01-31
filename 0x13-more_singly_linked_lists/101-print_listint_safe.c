@@ -8,23 +8,27 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	const listint_t *temp = head, *new;
-	size_t sum1, sum2;
+	size_t num1, num2;
 
-	for (sum1 = 0; temp; sum1++)
+	num1 = 0;
+	while (temp)
 	{
 		printf("[%p] %d\n", (void *)temp, temp->n);
+		num1++;
 		temp = temp->next;
 		new = head;
 
-		for (sum2 = 0; sum2 < sum1; sum2++)
+		num2 = 0;
+		while (num2 < num1)
 		{
 			if (temp == new)
 			{
 				printf("-> [%p] %d\n", (void *)temp, temp->n);
-				return (sum1);
+				return (num1);
 			}
 			new = new->next;
+			num2++;
 		}
 	}
-	return (sum1);
+	return (num1);
 }
