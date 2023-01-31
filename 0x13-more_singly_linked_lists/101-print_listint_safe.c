@@ -15,7 +15,7 @@ size_t print_listint_safe(const listint_t *head)
 		printf("[%p] %d\n", (void *)temp, temp->n);
 		temp = temp->next;
 		new = head;
-		
+
 		for (sum2 = 0; sum2 < sum1; sum2++)
 		{
 			if (temp == new)
