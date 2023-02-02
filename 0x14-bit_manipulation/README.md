@@ -4,7 +4,7 @@
 * 2-get_bit.c - Write a function that returns the value of a bit at a given index.
 * 3-set_bit.c - Write a function that sets the value of a bit to 1 at a given index.
 * 4-clear_bit.c - Write a function that sets the value of a bit to 0 at a given index.
-
+* 5-flip_bits.c - Write a function that returns the number of bits you would need to flip to get from one number to another.
 
 
 
@@ -217,5 +217,45 @@ julien@ubuntu:~/0x14. Binary$ ./e
 0
 0
 96
+julien@ubuntu:~/0x14. Binary$ 
+~~~~
+
+## 5-flip_bits.c ##
+
+Write a function that returns the number of bits you would need to flip to get from one number to another.
+
+* Prototype: unsigned int flip_bits(unsigned long int n, unsigned long int m);
+* You are not allowed to use the % or / operators
+
+~~~~
+julien@ubuntu:~/0x14. Binary$ cat 5-main.c
+#include <stdio.h>
+#include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    unsigned int n;
+
+    n = flip_bits(1024, 1);
+    printf("%u\n", n);
+    n = flip_bits(402, 98);
+    printf("%u\n", n);
+    n = flip_bits(1024, 3);
+    printf("%u\n", n);
+    n = flip_bits(1024, 1025);
+    printf("%u\n", n);
+    return (0);
+}
+julien@ubuntu:~/0x14. Binary$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 5-main.c 5-flip_bits.c -o f
+julien@ubuntu:~/0x14. Binary$ ./f
+2
+5
+3
+1
 julien@ubuntu:~/0x14. Binary$ 
 ~~~~
