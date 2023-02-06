@@ -1,54 +1,8 @@
 # alx-low_level_programming
-* 0-read_textfile.c
+* 0-read_textfile.c - Write a function that reads a text file and prints it to the POSIX standard output.
+* 1-create_file.c - Create a function that creates a file.
 * 2-append_text_to_file.c - Write a function that appends text at the end of a file.
 
-
-## 2-append_text_to_file.c ##
-
-Write a function that appends text at the end of a file.
-
-* Prototype: int append_text_to_file(const char *filename, char *text_content);
-* where filename is the name of the file and text_content is the NULL terminated string to add at the end of the file
-* Return: 1 on success and -1 on failure
-* Do not create the file if it does not exist
-* If filename is NULL return -1
-* If text_content is NULL, do not add anything to the file. Return 1 if the file exists and -1 if the file does not exist or if you do not have the required permissions to write the file
-
-~~~~
-julien@ubuntu:~/0x15. File descriptors and permissions$ cat 2-main.c
-#include <stdio.h>
-#include <stdlib.h>
-#include "main.h"
-
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(int ac, char **av)
-{
-    int res;
-
-    if (ac != 3)
-    {
-        dprintf(2, "Usage: %s filename text\n", av[0]);
-        exit(1);
-    }
-    res = append_text_to_file(av[1], av[2]);
-    printf("-> %i)\n", res);
-    return (0);
-}
-julien@ubuntu:~/0x15. File descriptors and permissions$ echo -n Hello > hello
-julien@ubuntu:~/0x15. File descriptors and permissions$ ls -l hello
--rw-rw-r-- 1 julien julien 5 Dec  3 14:48 hello
-julien@ubuntu:~/0x15. File descriptors and permissions$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-append_text_to_file.c -o c
-julien@ubuntu:~/0x15. File descriptors and permissions$ ./c hello " World!
-> "
--> 1)
-julien@ubuntu:~/0x15. File descriptors and permissions$ cat hello 
-Hello World!
-julien@ubuntu:~/0x15. File descriptors and permissions$
-~~~~
 
 ## 0-read_textfile.c ##
 
@@ -57,7 +11,7 @@ Write a function that reads a text file and prints it to the POSIX standard outp
 * Prototype: ssize_t read_textfile(const char *filename, size_t letters);
 * where letters is the number of letters it should read and print
 * returns the actual number of letters it could read and print
-* if the file can not be opened or read, return 0
+*- if the file can not be opened or read, return 0
 * if filename is NULL return 0
 * if write fails or does not write the expected amount of bytes, return 0
 
@@ -155,4 +109,49 @@ Heap earth upon it.
 
 (printed chars: 468)
 julien@ubuntu:~/0x15. File descriptors and permissions$ 
+~~~~
+
+## 1-create_file.c ##
+
+Create a function that creates a file.
+
+* Prototype: int create_file(const char *filename, char *text_content);
+* where filename is the name of the file to create and text_content is a NULL terminated string to write to the file
+* Returns: 1 on success, -1 on failure (file can not be created, file can not be written, write “fails”, etc…)
+* The created file must have those permissions: rw-------. If the file already exists, do not change the permissions.
+* if the file already exists, truncate it
+* if filename is NULL return -1
+* if text_content is NULL create an empty file
+
+~~~~
+julien@ubuntu:~/0x15. File descriptors and permissions$ cat 1-main.c
+#include <stdio.h>
+#include <stdlib.h>
+#include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(int ac, char **av)
+{
+    int res;
+
+    if (ac != 3)
+    {
+        dprintf(2, "Usage: %s filename text\n", av[0]);
+        exit(1);
+    }
+    res = create_file(av[1], av[2]);
+    printf("-> %i)\n", res);
+    return (0);
+}
+julien@ubuntu:~/0x15. File descriptors and permissions$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-create_file.c -o b
+julien@ubuntu:~/0x15. File descriptors and permissions$ ./b hello world
+-> 1)
+julien@ubuntu:~/0x15. File descriptors and permissions$ ls -l hello
+-rw------- 1 julien julien 5 Dec  3 14:28 hello
+julien@ubuntu:~/0x15. File descriptors and permissions$ cat hello 
+worldjulien@ubuntu:~/0x15. File descriptors and permis$ 
 ~~~~
