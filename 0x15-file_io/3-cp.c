@@ -1,22 +1,6 @@
 #include "main.h"
 
 /**
- * str_len - a function that returns the lenght of a string
- * @s: the string to chck the length
- * Return: the length of the string
- */
-int str_len(char *s)
-{
-	int len;
-
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-
-	return (len);
-}
-
-/**
  * copy_from_file_to_file - a function that creates a file
  * @file1: the name of the file to create
  * @file2: is a NULL terminated string to write to the file
@@ -34,21 +18,18 @@ int copy_from_file_to_file(const char *file1, const char *file2)
 		dprintf(2, "Error: Can't read from file %s\n", file1);
 		exit(98);
 	}
-
 	file_reader_open_file2 = open(file2, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (file_reader_open_file2 == -1)
 	{
 		dprintf(2, "Error: Can't write to %s\n", file2);
 		exit(99);
 	}
-
 	file_reader_read = read(file_reader_open_file1, buff, 1024);
 	if (file_reader_read == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", file1);
 		exit(98);
 	}
-
 	file_reader_write = write(file_reader_open_file2, buff, file_reader_read);
 	if (file_reader_write == -1)
 	{
@@ -58,12 +39,12 @@ int copy_from_file_to_file(const char *file1, const char *file2)
 
 	if (close(file_reader_open_file1) == -1)
 	{
-		dprintf(2,"Error: Can't close %d\n" , file_reader_open_file1);
+		dprintf(2, "Error: Can't close %d\n", file_reader_open_file1);
 		exit(100);
 	}
 	if (close(file_reader_open_file2) == -1)
 	{
-		dprintf(2, "Error: Can't close %d\n",file_reader_open_file2);
+		dprintf(2, "Error: Can't close %d\n", file_reader_open_file2);
 		exit(100);
 	}
 	return (1);
@@ -75,7 +56,7 @@ int copy_from_file_to_file(const char *file1, const char *file2)
  * @argv: the array of arguments
  * Return: Always 0.
  */
-int main (int argc, char **argv)
+int main(int argc, char **argv)
 {
 	int copy;
 
