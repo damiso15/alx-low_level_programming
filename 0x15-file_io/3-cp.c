@@ -24,19 +24,20 @@ int copy_from_file_to_file(const char *file1, const char *file2)
 		dprintf(2, "Error: Can't write to %s\n", file2);
 		exit(99);
 	}
-	file_reader_read = read(file_reader_open_file1, buff, 1024);
+	while ((file_reader_read = read(file_reader_open_file1, buff, 1024)) > 0)
+	{
+		file_reader_write = write(file_reader_open_file2, buff, file_reader_read);
+		if (file_reader_write == -1)
+		{
+			dprintf(2, "Error: Can't write to %s\n", file2);
+			exit(99);
+		}
+	}
 	if (file_reader_read == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", file1);
 		exit(98);
 	}
-	file_reader_write = write(file_reader_open_file2, buff, file_reader_read);
-	if (file_reader_write == -1)
-	{
-		dprintf(2, "Error: Can't write to %s\n", file2);
-		exit(99);
-	}
-
 	if (close(file_reader_open_file1) == -1)
 	{
 		dprintf(2, "Error: Can't close %d\n", file_reader_open_file1);
@@ -44,8 +45,7 @@ int copy_from_file_to_file(const char *file1, const char *file2)
 	}
 	if (close(file_reader_open_file2) == -1)
 	{
-		dprintf(2, "Error: Can't close %d\n", file_reader_open_file2);
-		exit(100);
+		dprintf(2, "Error: Can't close %d\n", file_reader_open_file2), exit(100);
 	}
 	return (1);
 }
