@@ -1,0 +1,13 @@
+To solve this problem, we need to iterate over all possible combinations of three-digit numbers and find the largest palindrome made from their product.
+
+We can start by defining a function to check if a number is a palindrome:
+
+This function takes an integer as input and returns 1 if it is a palindrome, 0 otherwise. It works by reversing the digits of the number and checking if the result is equal to the original number.
+
+Next, we can write the main function to find the largest palindrome made from the product of two 3-digit numbers:
+
+This program iterates over all possible combinations of three-digit numbers using two nested loops. For each combination, it computes the product of the two numbers and checks if it is a palindrome using the is_palindrome function. If the product is a palindrome and larger than the current largest palindrome, it updates the value of largest_palindrome.
+
+Finally, the program prints the value of largest_palindrome.
+
+We can compile and run this program with the following commands:
