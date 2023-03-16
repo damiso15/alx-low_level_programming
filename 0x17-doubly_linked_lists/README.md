@@ -9,6 +9,8 @@
 * 6-sum_dlistint.c - Write a function that returns the sum of all the data (n) of a `dlistint_t` linked list.
 * 7-insert_dnodeint.c - Write a function that inserts a new node at a given position.
 * 8-delete_dnodeint.c - Write a function that deletes the node at index index of a `dlistint_t` linked list.
+* 100-password - Find the password for [crackme4](https://github.com/holbertonschool/0x17.c).
+
 
 
 
@@ -571,3 +573,11 @@ julien@ubuntu:~/0x17. Doubly linked lists$ ./k
 -----------------
 julien@ubuntu:~/0x17. Doubly linked lists$ 
 ~~~~
+
+
+## 100-password ##
+Find the password for [crackme4]().
+
+* Save the password in the file `100-password`
+* Your file should contain the exact password, no new line, no extra space
+* Hint: The program prints “OK” when the password is correct
