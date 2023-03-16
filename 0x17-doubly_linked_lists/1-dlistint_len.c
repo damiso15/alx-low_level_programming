@@ -16,6 +16,6 @@ size_t dlistint_len(const dlistint_t *h)
 		current = current->next;
 	}
 
-	return count;
+	return (count);
 }
 
