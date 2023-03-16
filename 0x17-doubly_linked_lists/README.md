@@ -2,6 +2,7 @@
 
 * 0-print_dlistint.c - Write a function that prints all the elements of a `dlistint_t` list.
 * 1-dlistint_len.c - Write a function that returns the number of elements in a linked `dlistint_t` list.
+* 2-add_dnodeint.c - Write a function that adds a new node at the beginning of a `dlistint_t` list.
 
 
 
@@ -101,5 +102,53 @@ int main(void)
 julien@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-dlistint_len.c -o b
 julien@ubuntu:~/0x17. Doubly linked lists$ ./b 
 -> 2 elements
+julien@ubuntu:~/0x17. Doubly linked lists$ 
+~~~~
+
+
+## 2-add_dnodeint.c ##
+Write a function that adds a new node at the beginning of a `dlistint_t` list.
+
+* Prototype: `dlistint_t *add_dnodeint(dlistint_t **head, const int n);`
+* Return: the address of the new element, or `NULL` if it failed
+
+~~~~
+julien@ubuntu:~/0x17. Doubly linked lists$ cat 2-main.c 
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "lists.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always EXIT_SUCCESS.
+ */
+int main(void)
+{
+    dlistint_t *head;
+
+    head = NULL;
+    add_dnodeint(&head, 0);
+    add_dnodeint(&head, 1);
+    add_dnodeint(&head, 2);
+    add_dnodeint(&head, 3);
+    add_dnodeint(&head, 4);
+    add_dnodeint(&head, 98);
+    add_dnodeint(&head, 402);
+    add_dnodeint(&head, 1024);
+    print_dlistint(head);
+    return (EXIT_SUCCESS);
+}
+julien@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-add_dnodeint.c 0-print_dlistint.c -o c
+julien@ubuntu:~/0x17. Doubly linked lists$ ./c 
+1024
+402
+98
+4
+3
+2
+1
+0
 julien@ubuntu:~/0x17. Doubly linked lists$ 
 ~~~~
