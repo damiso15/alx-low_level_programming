@@ -1,0 +1,45 @@
+Here are the steps to create a dynamic library named libdynamic.so:
+
+1. Write the source code for your library, for example:
+
+// dynamic.c
+#include <stdio.h>
+void dynamic_function(void)
+{
+    printf("Hello from dynamic library!\n");
+}
+
+
+2. Compile the source code into an object file:
+
+gcc -c -fPIC dynamic.c -o dynamic.o
+
+
+The -c option tells GCC to compile the code into an object file without linking it. The -fPIC option generates position-independent code, which is required for creating shared libraries.
+
+
+3. Create the shared library by linking the object file:
+
+gcc -shared dynamic.o -o libdynamic.so
+
+
+4. The -shared option tells GCC to create a shared library, and -o libdynamic.so specifies the name of the output file.
+
+Install the library to a system directory (optional):
+
+sudo cp libdynamic.so /usr/local/lib/
+
+This step is optional, but if you want to make the library available to other programs on your system, you can install it to a system directory like /usr/local/lib/.
+
+
+5. Add the library path to the linker's search path:
+
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+
+This step is also optional, but if you installed the library to a non-standard directory, you may need to add that directory to the linker's search path to make the library available to programs that use it.
+
+That's it! You now have a dynamic library named libdynamic.so that you can link to other programs using the -ldynamic option (assuming you installed the library to a standard directory like /usr/local/lib/).
+
+
+
+
