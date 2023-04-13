@@ -202,7 +202,7 @@ void shash_table_print(const shash_table_t *ht)
 void shash_table_print_rev(const shash_table_t *ht)
 {
 	shash_node_t *current;
-	int first;
+	int first = 1;
 
 	if (ht == NULL)
 		return;
@@ -213,14 +213,14 @@ void shash_table_print_rev(const shash_table_t *ht)
 	{
 		if (first)
 		{
-			printf("'%s': '%s'", current->key, current->value);
 			first = 0;
 		}
 		else
 		{
-			printf(", '%s': '%s'", current->key, current->value);
+			printf(", ");
 		}
 
+		printf("'%s': '%s'", current->key, current->value);
 		current = current->sprev;
 	}
 
