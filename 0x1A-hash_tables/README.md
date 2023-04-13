@@ -4,6 +4,7 @@
 * 2-key_index.c - Write a function that gives you the index of a key.
 * 3-hash_table_set.c - Write a function that adds an element to the hash table.
 * 4-hash_table_get.c - Write a function that retrieves a value associated with a key.
+* 5-hash_table_print.c - Write a function that prints a hash table.
 
 
 
@@ -276,5 +277,51 @@ Betty:Cool
 98:Battery Street
 c:isfun
 javascript:(null)
+julien@ubuntu:~/0x1A. Hash tables$
+~~~~
+
+
+## 5-hash_table_print.c ##
+Write a function that prints a hash table.
+
+* Prototype: `void hash_table_print(const hash_table_t *ht);`
+	* where `ht` is the hash table
+* You should print the key/value in the order that they appear in the array of hash table
+	* Order: array, list
+* Format: see example
+* If `ht` is NULL, don’t print anything
+
+~~~~
+julien@ubuntu:~/0x1A. Hash tables$ cat 5-main.c 
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "hash_tables.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always EXIT_SUCCESS.
+ */
+int main(void)
+{
+    hash_table_t *ht;
+
+    ht = hash_table_create(1024);
+    hash_table_print(ht);
+    hash_table_set(ht, "c", "fun");
+    hash_table_set(ht, "python", "awesome");
+    hash_table_set(ht, "Bob", "and Kris love asm");
+    hash_table_set(ht, "N", "queens");
+    hash_table_set(ht, "Asterix", "Obelix");
+    hash_table_set(ht, "Betty", "Cool");
+    hash_table_set(ht, "98", "Battery Street");
+    hash_table_print(ht);
+    return (EXIT_SUCCESS);
+}
+julien@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 5-main.c 0-hash_table_create.c 1-djb2.c 2-key_index.c 3-hash_table_set.c 4-hash_table_get.c 5-hash_table_print.c -o f
+julien@ubuntu:~/0x1A. Hash tables$ ./f 
+{}
+{'Betty': 'Cool', 'python': 'awesome', 'Bob': 'and Kris love asm', '98': 'Battery Street', 'N': 'queens', 'c': 'fun', 'Asterix': 'Obelix'}
 julien@ubuntu:~/0x1A. Hash tables$
 ~~~~
