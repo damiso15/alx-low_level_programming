@@ -2,7 +2,7 @@
 
 /**
  * key_index - a function that gives you the index of a key
- * 
+ *
  * @key: The key, string
  * The key is unique in the HashTable
  * @size: The size of the array
