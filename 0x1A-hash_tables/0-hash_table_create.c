@@ -22,7 +22,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	new_hash_table->size = size;
 	new_hash_table->array = calloc(new_hash_table->size, sizeof(new_hash_table));
-	if (new_hash_table == NULL)
+	if (new_hash_table->array == NULL)
 	{
 		free(new_hash_table);
 		return (NULL);
