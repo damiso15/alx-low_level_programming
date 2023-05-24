@@ -1,0 +1,9 @@
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+school: main.c school.c
+	$(CC) $(CFLAGGS) $^ -o $@
+
+.PHONY: clean
+clean:
+	rm -f school
