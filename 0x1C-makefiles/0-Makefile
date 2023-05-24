@@ -1,8 +1,8 @@
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-school: main.c school.c
-	$(CC) $(CFLAGGS) $^ -o $@
+all: main.c school.c
+	$(CC) $(CFLAGGS) $^ -o school
 
 .PHONY: clean
 clean:
