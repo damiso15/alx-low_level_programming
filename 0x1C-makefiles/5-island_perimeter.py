@@ -1,8 +1,12 @@
 #!/usr/bin/python3
+"""
+Created on 24th May, 2023
 
+Author:
+    Oluwadamilola Sonaike
+"""
 
 def island_perimeter(grid):
-
     """
     Calculates the perimeter of the island described in the grid.
 
